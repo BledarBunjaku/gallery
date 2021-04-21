@@ -1,36 +1,50 @@
+import React from "react"
+import {Box, Typography} from "@material-ui/core"
+import {makeStyles, createStyles, Button} from "@material-ui/core"
+import EditIcon from '@material-ui/icons/Edit';
 
 
+const useStyles = makeStyles((Theme) =>  createStyles({
 
-import React from 'react';
-import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
-import TextField from '@material-ui/core/TextField';
-
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    root: {
-      '& > *': {
-        margin: theme.spacing(1),
-        width: '25ch',
-      },
+    test: {
+        border: "none",
+        boxShadow: "0 1px 3px grey"       
     },
-  }),
-);
+    test2: {
+        width: "100%",
+        boxSizing: "border-box",
+        fontSize: "16px",
+        border: "none",
+        
+        "&:focus-visible" : {
+          outline: "none",
+          border:"none"
+        }
+    },
+    button: {
+      border: "none",
+      backgroundColor: "transparent",
+      cursor: "pointer"
+      
+    }
 
-export default function BasicTextFields() {
-  const classes = useStyles();
+    
+}))
+ 
+const Test2 = () => {
 
-  return (
-    <form className={classes.root} noValidate autoComplete="off">
-      <TextField id="standard-basic" label="Standard" />
-      <TextField id="filled-basic" label="Filled" variant="filled" />
-      <TextField id="outlined-basic" label="Outlined" variant="outlined" />
-    </form>
-  );
+    const classes = useStyles()
+
+    return<>
+    <Box component="span" display="inline-block">Gallery *</Box>
+    <Box className={classes.test} component="div" border={2} maxWidth={450} boxSizing="border-box" display="flex" padding={0.5} borderRadius={5}>        
+            <input className={classes.test2} type="text" placeholder="Enter Tier Name"/>
+            <button className={classes.button}><EditIcon/></button>
+     </Box></> 
+
 }
 
-
-
-
+export default Test2
 
 
 

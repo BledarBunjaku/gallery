@@ -28,12 +28,15 @@ export default function EmptyTextarea() {
 
      const classes  = useStyles()
 
-    return <Box className={classes.div} component="div" display="flex" flexDirection="column" borderRadius={7} m={5}>
+    return<>
+    <Box component="span" display="inline-block" >Gallery description</Box>
+    <Box className={classes.div} component="div" display="flex" flexDirection="column" borderRadius={7}>
         <Box>
             <TextareaAutosize className={classes.root} rows="4" placeholder="Empty" />
         </Box>        
-        <Box component="div" height="30px" borderTop={1}> </Box>
-    </Box>
+        <Box component="div" height="30px" borderTop={1}> 
+            </Box>
+    </Box></> 
 }
 
 
