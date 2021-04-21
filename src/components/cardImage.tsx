@@ -9,7 +9,7 @@ import DeleteIcon from '@material-ui/icons/Delete';
 const useStyles = makeStyles({
   card: {
     margin: 3,
-    maxWidth: 75,
+    maxWidth: 70,
     height: "max-content"
   },
   cardDescription:{
