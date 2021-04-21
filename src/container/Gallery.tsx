@@ -7,6 +7,7 @@ Typography
 } from '@material-ui/core';
 import EditIcon from '@material-ui/icons/Edit';
 import CardImage from "../components/cardImage";
+import PublishIcon from '@material-ui/icons/Publish';
 import KeyboardBackspaceIcon from '@material-ui/icons/KeyboardBackspace';
 import FormatBoldIcon from '@material-ui/icons/FormatBold';
 import FormatItalicIcon from '@material-ui/icons/FormatItalic';
@@ -122,15 +123,68 @@ createStyles({
                 padding: 0
             }
     },
+
+    
+
+    imagesContent: {
+        display: "flex",
+        [Theme.breakpoints.down('xs')]: {
+            flexDirection: "column"
+          }
+
+    },
+
     coverImages: {
-        "& .makeStyles-card-39": {
-                maxWidth: 150
+        "& div": {
+                maxWidth: 188,
+                width: 188,
+                height: "max-content"
             }
         },
     setCover:{
         display: "flex",
         flexWrap: "wrap"
-        }
+        },
+
+
+
+
+        uploadImageWrapper: {
+            maxWidth: 150,
+                height: 100,
+                border: "2px solid grey",
+                borderRadius: 5,
+                display: "flex",
+                flexDirection: "column"
+            },
+            uploadImageLogo: {
+                height: "60%",
+                display:"flex",
+                justifyContent: "center",
+                alignItems: "flex-end"
+            },
+            uploadImageDescription: {
+                display: "flex",
+                justifyContent: "cener",
+                alignItems: "flex-start",
+                height:"40%",
+                "& p": {
+                    fontSize: 9,
+                    textAlign: "center",
+                    lineHeight: "12px",
+                    "& span": {
+                        fontSize: 7,
+                        fontStyle: "italic"
+                    }
+                }
+            }
+
+
+
+
+
+
+
     
     
 }))
@@ -179,14 +233,11 @@ const Gallery = () => {
                 </Box>
 
                 
-
-            <Box component="div">
+            <Box component="span">Images</Box>
+            <Box className={classes.imagesContent} component="div">
                 
-                <Box className={classes.coverImages} component="div">
-                    
-                    <CardImage/>
-
-
+                <Box className={classes.coverImages} component="div">                   
+                   <CardImage/>
                 </Box>
             <Box className={classes.setCover} component="div">
                     <CardImage />
@@ -196,14 +247,23 @@ const Gallery = () => {
                     <CardImage />
                     <CardImage/>
             </Box>
-                
+            </Box>
 
-            
-            
+            <Box component="div">
+            <Box component="span">Upload Images *</Box>
+         <Box className={classes.uploadImageWrapper} component="div">
+                 <Box className={classes.uploadImageLogo} component="div" display="flex" justifyContent="center" alignItems="flex-end">
+                    <PublishIcon fontSize="large" />
+                 </Box>
+                 <Box className={classes.uploadImageDescription} component="div">           
+                     <Typography  component="p">
+                         Drop your image here, or browse<br />
+                         <span>Supports JPG, JPG2000, PNG</span>
+                     </Typography>            
+                </Box>        
             </Box>
             </Box>
-                
-       
+        </Box> 
     </>
 }
 
