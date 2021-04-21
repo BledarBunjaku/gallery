@@ -1,4 +1,4 @@
-import {Grid,
+import {
 makeStyles,
 createStyles,
 TextareaAutosize,
@@ -121,6 +121,15 @@ createStyles({
                 fontSize: 20,
                 padding: 0
             }
+    },
+    coverImages: {
+        "& .makeStyles-card-39": {
+                maxWidth: 150
+            }
+        },
+    setCover:{
+        display: "flex",
+        flexWrap: "wrap"
         }
     
     
@@ -169,21 +178,30 @@ const Gallery = () => {
                     </Box>
                 </Box>
 
-                </Box>
+                
 
-                 {/* Gallery Images */}
-                 {/* <Box component="span" display="inline-block" py="5px" >Images</Box>
-                <Grid container >
-                    <Grid sm={3} md= {2} justify="center" alignItems="center">
-                            <CardImage/>
-                    </Grid>
-                    <Grid sm={2} md= {1}>
-                        <CardImage/>
-                    </Grid>
-                    <Grid sm={2} md= {1}>
-                        <CardImage/>
-                    </Grid>
-                </Grid> */}
+            <Box component="div">
+                
+                <Box className={classes.coverImages} component="div">
+                    
+                    <CardImage/>
+
+
+                </Box>
+            <Box className={classes.setCover} component="div">
+                    <CardImage />
+                    <CardImage/>
+                    <CardImage />
+                    <CardImage />
+                    <CardImage />
+                    <CardImage/>
+            </Box>
+                
+
+            
+            
+            </Box>
+            </Box>
                 
        
     </>
