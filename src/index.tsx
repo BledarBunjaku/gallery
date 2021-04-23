@@ -6,10 +6,11 @@ import Test from './components/cardImage';
 import Test1 from "./atest"
 import reportWebVitals from './reportWebVitals';
 import Gallery from "./container/Gallery"
+import Button from './aaaaa'
 
 ReactDOM.render(
   <React.StrictMode>
-    <Gallery />
+    <Button />
   </React.StrictMode>,
   document.getElementById('root')
 );

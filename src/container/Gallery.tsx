@@ -16,6 +16,7 @@ import FormatListBulletedIcon from "@material-ui/icons/FormatListBulleted";
 import VisibilityIcon from "@material-ui/icons/Visibility";
 import DeleteIcon from "@material-ui/icons/Delete";
 import Example from "../example.jpg";
+import {CancelButton} from '../stories/CancelButton'
 
 const useStyles = makeStyles((Theme) =>
   createStyles({
@@ -343,7 +344,7 @@ const Gallery = () => {
                 width="100%"
               >
                 <Typography variant="h5" component="p" align="center">
-                  Cover Image
+                  Cover Imageasdasdasd
                 </Typography>
               </Box>
             </Box>
@@ -356,6 +357,8 @@ const Gallery = () => {
             <CardImage />
           </Box>
         </Box>
+
+        <CancelButton>Cancel</CancelButton>
 
         {/* Upload Image  */}
         <Box component="div" pb={5}>
