@@ -2,7 +2,8 @@ import React from 'react';
 
 import Button from '@material-ui/core/Button';
 import  {CircleButton}  from './SecondaryButton';
-import {CancelButton} from './CancelButton'
+import CancelButton from './CancelButton'
+import SaveChangesButton from "./SaveChanges"
 import { action } from '@storybook/addon-actions';
 
 export default {
@@ -37,6 +38,10 @@ export const CancelFirst = () => (
   <CancelButton>
     Cancel
   </CancelButton>
-
+)
+export const SaveFirst = () => (
+  <SaveChangesButton>
+    Save Changes
+  </SaveChangesButton>
 )
   

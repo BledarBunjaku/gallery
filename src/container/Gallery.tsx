@@ -16,7 +16,9 @@ import FormatListBulletedIcon from "@material-ui/icons/FormatListBulleted";
 import VisibilityIcon from "@material-ui/icons/Visibility";
 import DeleteIcon from "@material-ui/icons/Delete";
 import Example from "../example.jpg";
-import {CancelButton} from '../stories/CancelButton'
+import CancelButton from '../stories/CancelButton'
+import SaveChanges from '../stories/SaveChanges'
+
 
 const useStyles = makeStyles((Theme) =>
   createStyles({
@@ -358,8 +360,6 @@ const Gallery = () => {
           </Box>
         </Box>
 
-        <CancelButton>Cancel</CancelButton>
-
         {/* Upload Image  */}
         <Box component="div" pb={5}>
           <Box className={classes.sectionsTitle} component="span">
@@ -380,6 +380,10 @@ const Gallery = () => {
             </Box>
           </Box>
         </Box>
+      </Box>
+      <Box component="div" display="flex" justifyContent="space-around">
+      <CancelButton>Cancel</CancelButton>
+      <SaveChanges>Save Changes</SaveChanges>
       </Box>
     </>
   );

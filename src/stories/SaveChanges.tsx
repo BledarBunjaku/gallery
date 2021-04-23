@@ -5,18 +5,18 @@ import {withStyles, Button, ButtonProps} from "@material-ui/core"
 const FirstButton = withStyles(theme =>({
     
     root: {
-        background: "rgba(255, 99, 71, 0.8)",
+        background: "rgba(148, 253, 159, 0.8)",
         opacity: 0.6,
         borderRadius: 4,
         boxShadow: "none",
         "&:hover":{
-            background: "rgba(255, 99, 71, 0.8)",
+            background: "rgba(148, 253, 159, 0.8)",
             boxShadow: "none"
         }
     },     
     label:{
-        fontSize: 16,
-        color: "red" ,
+        fontSize: 14,
+        color: "green" ,
         textTransform: "capitalize",
         opacity: 1,
         "&:hover":{
@@ -29,8 +29,9 @@ const FirstButton = withStyles(theme =>({
 export type FirstButtonProps = ButtonProps & {};
 
 
- const CancelButton: React.FC<FirstButtonProps> = (props: FirstButtonProps ) =>
+ const SaveChangesButton: React.FC<FirstButtonProps> = (props: FirstButtonProps ) =>
   {
-    return <FirstButton variant="contained" {...props} disableRipple >Cancel</FirstButton>
+    return <FirstButton variant="contained" {...props} >Save Changes</FirstButton>
 }
-export default CancelButton
+export default SaveChangesButton
+

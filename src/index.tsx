@@ -10,7 +10,7 @@ import Button from './aaaaa'
 
 ReactDOM.render(
   <React.StrictMode>
-    <Button />
+    <Gallery />
   </React.StrictMode>,
   document.getElementById('root')
 );
