@@ -240,6 +240,15 @@ const useStyles = makeStyles((Theme) =>
       },
     },
 
+    saveBar: {
+      display:"flex",
+      justifyContent: "center",
+      boxShadow: "0 -1px 3px grey",
+      "& button": {
+        margin: "0 3px"
+      }
+    },
+
     //COMMON CLASSES
 
     //GALLERY SECTIONS TITLE
@@ -346,7 +355,7 @@ const Gallery = () => {
                 width="100%"
               >
                 <Typography variant="h5" component="p" align="center">
-                  Cover Imageasdasdasd
+                  Cover Image
                 </Typography>
               </Box>
             </Box>
@@ -381,7 +390,7 @@ const Gallery = () => {
           </Box>
         </Box>
       </Box>
-      <Box component="div" display="flex" justifyContent="space-around">
+      <Box className={classes.saveBar} component="div">
       <CancelButton>Cancel</CancelButton>
       <SaveChanges>Save Changes</SaveChanges>
       </Box>
