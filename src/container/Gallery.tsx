@@ -4,7 +4,8 @@ import {
   TextareaAutosize,
   Box,
   Typography,
-} from "@material-ui/core";
+} 
+from "@material-ui/core";
 import EditIcon from "@material-ui/icons/Edit";
 import CardImage from "../components/cardImage";
 import PublishIcon from "@material-ui/icons/Publish";
@@ -22,6 +23,18 @@ import SaveChanges from '../stories/SaveChanges'
 
 const useStyles = makeStyles((Theme) =>
   createStyles({
+
+
+    "@global": {
+      body: {
+        backgroundColor: "#eaeaea",
+      }
+    },
+
+
+    // body: {
+    //   backgroundColor: "red"
+    // },
     // Gallery Path Bar
     galleryPathBar: {
       display: "flex",
@@ -31,6 +44,7 @@ const useStyles = makeStyles((Theme) =>
     },
 
     galleryPathWrapper: {
+      backgroundColor: "white",
       color: "#5d5c5c",
       flex: 1,
       boxShadow: "0 1px 2px grey",
@@ -239,11 +253,18 @@ const useStyles = makeStyles((Theme) =>
         },
       },
     },
+    
 
     saveBar: {
+      position:"fixed",
+      backgroundColor: "white",
+      bottom: 0,
+      left: 0,
+      width: "100%",
       display:"flex",
       justifyContent: "center",
       boxShadow: "0 -1px 3px grey",
+      zIndex: 1,
       "& button": {
         margin: "0 3px"
       }
@@ -312,7 +333,7 @@ const Gallery = () => {
 
         {/* Gallery Description */}
         <Box className={classes.sectionsTitle} component="span">
-          Gallery description <span>*</span>{" "}
+          Gallery description   <span>*</span>{" "}
           <small>
             {" "}
             <i>(Max 225 characters)</i>{" "}
@@ -341,7 +362,7 @@ const Gallery = () => {
           <Box>
             <Box className={classes.card} component="div">
               <Box className={classes.imageWrapper}>
-                <img src={Example} />
+                <img src={Example} alt="thumbnail" />
                 <Box>
                   <span>
                     <VisibilityIcon color="primary" fontSize="small" />
@@ -355,7 +376,7 @@ const Gallery = () => {
                 width="100%"
               >
                 <Typography variant="h5" component="p" align="center">
-                  Cover Image
+                  Cover Imageasd
                 </Typography>
               </Box>
             </Box>
@@ -389,11 +410,14 @@ const Gallery = () => {
             </Box>
           </Box>
         </Box>
-      </Box>
+      </Box>    
+
       <Box className={classes.saveBar} component="div">
       <CancelButton>Cancel</CancelButton>
       <SaveChanges>Save Changes</SaveChanges>
       </Box>
+
+      
     </>
   );
 };

@@ -55,7 +55,7 @@ export default function CardIMage() {
     <>
       <Box component="div" className={classes.card}>
         <Box className={classes.imageWrapper} component="div">
-          <img src={Example} />
+          <img src={Example} alt={'sdfsd'} />
           <Box>
             <span>
               <VisibilityIcon color="primary" fontSize="small" />
