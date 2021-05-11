@@ -18,6 +18,12 @@ import {
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
+    "@global": {
+      body: {
+        background: "#EFEEEF",
+      },
+    },
+
     selectObjectBar: {
       display: "flex",
       maxWidth: 450,
@@ -37,6 +43,14 @@ const useStyles = makeStyles((theme: Theme) =>
       marginLeft: 5,
       borderRadius: 4,
       overflow: "hidden",
+      "& button": {
+        backgroundColor: "#00CBB0",
+        color: "#fff",
+        textTransform: "capitalize",
+        "&:hover": {
+          backgroundColor: "#00CBB0",
+        },
+      },
     },
     select: {
       placeholder: "Objects",
@@ -126,7 +140,7 @@ const names = [
   "Kelly Snyder",
 ];
 
-export const Tires = () => {
+export const Tiers = () => {
   const classes = useStyles();
 
   const [personName, setPersonName] = React.useState<string[]>([]);

@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme: Theme) =>
       display: "flex",
       padding: 2,
       overflow: "hidden",
-      boxShadow: "0 1px 3px ##b5b5b5",
+      boxShadow: "0 1px 3px #b5b5b5",
       borderRadius: 5,
     },
     tierBarName: {
@@ -51,11 +51,11 @@ const useStyles = makeStyles((theme: Theme) =>
       "& button": {
         width: " max-content",
         textTransform: "capitalize",
-        backgroundColor: "#00a152",
+        backgroundColor: "#00CBB0",
         color: "#fff",
         "&:hover": {
           color: "#fff",
-          background: "#00a152",
+          background: "#00CBB0",
         },
       },
     },
@@ -68,11 +68,11 @@ const useStyles = makeStyles((theme: Theme) =>
         paddingRight: 15,
         width: " max-content",
         textTransform: "capitalize",
-        backgroundColor: "#00a152",
+        backgroundColor: "#00CBB0",
         color: "#fff",
         "&:hover": {
           color: "#fff",
-          background: "#00a152",
+          background: "#00CBB0",
         },
         "& span": {
           "& svg": {
@@ -84,7 +84,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-export const Test1 = () => {
+export const Tier = () => {
   const classes = useStyles();
 
   return (

@@ -1,16 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./App";
+import { App } from "./container/app-routes";
 import Test from "./appp";
-import { Test1 } from "./container/test1";
+import { Tier } from "./container/tier";
 import { Test2 } from "./container/test2";
 import reportWebVitals from "./reportWebVitals";
-import { Tires } from "./container/tiers";
+import { Tiers } from "./container/tiers";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Tires />
+    <App />
   </React.StrictMode>,
   document.getElementById("root")
 );
